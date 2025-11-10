@@ -1,0 +1,12 @@
+[package]
+name = "secretify"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+tokio = { version = "1.48", features = ["rt", "macros", "rt-multi-thread"] }
+headless_chrome = "1.0.18"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "ansi"] }
