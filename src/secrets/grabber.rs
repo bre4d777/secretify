@@ -8,16 +8,12 @@ const STEALTH_JS: &str = r"(function () {
 	
 	Object.defineProperty(navigator, 'webdriver', { get: () => false });
 
-	
 	Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
 
-	
 	Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
 
-	
 	window.chrome = { runtime: {} };
 
-	
 	const originalQuery = window.navigator.permissions.query;
 	window.navigator.permissions.query = (parameters) => (
 		parameters.name === 'notifications' ?
@@ -25,7 +21,6 @@ const STEALTH_JS: &str = r"(function () {
 			originalQuery(parameters)
 	);
 
-	
 	const getParameter = WebGLRenderingContext.prototype.getParameter;
 	WebGLRenderingContext.prototype.getParameter = function (param) {
 		if (param === 37445) return 'Intel Inc.';

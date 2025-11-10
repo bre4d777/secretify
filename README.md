@@ -25,11 +25,6 @@ To run:
 cargo run --release
 ```
 
-Or directly execute the binary:
-
-```bash
-./target/release/secretify
-```
 
 ## Using the JSON Data
 
@@ -151,12 +146,12 @@ print(f"Version {v}: {latest_secret}")
 
 ## How It Works
 
-1. Launches a headless Chrome browser with stealth mode to avoid detection
+1. Launches a headless Chrome browser with stealth mode
 2. Navigates to `https://open.spotify.com`
 3. Injects a hook into `Object.prototype.secret` to capture secret assignments
 4. Waits for secrets to be captured during page load
 5. Extracts and processes the captured secrets
-6. Exports data in three JSON formats for easy consumption
+6. Exports data in three JSON formats
 
 ## Project Structure
 
